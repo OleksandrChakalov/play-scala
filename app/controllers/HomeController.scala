@@ -18,7 +18,7 @@ class HomeController @Inject()(cc: ControllerComponents) (implicit assetsFinder:
    * will be called when the application receives a `GET` request with
    * a path of `/`.
    */
-  def index = Action {
+  def index: Action[AnyContent] = Action {
     Ok(views.html.index("Your new application is ready. WOW!"))
   }
 
